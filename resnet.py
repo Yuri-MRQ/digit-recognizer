@@ -101,7 +101,7 @@ def resnet18(input_shape):
 
     x = AveragePooling2D(pool_size=(2, 2), padding='same')(x)
     x = Flatten()(x)
-    x = Dense(1, activation='sigmoid')(x)
+    x = Dense(10, activation='softmax')(x)
     
     model = Model(inputs = input_in, outputs = x, name='resnet18')
     
